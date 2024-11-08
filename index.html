@@ -1,92 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="https://static-00.iconduck.com/assets.00/discord-icon-2048x2048-o5mluhz2.png">
-    <title>𝗔𝗶</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #313338;
-            color: #f4f4f4;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #5865f2; 
-            margin-bottom: 10px;
-            margin-top: 40px;
-        }
-        p {
-            line-height: 1.6; 
-        }
-        .commands {
-            background-color: #1e1f22;
-            padding: 15px;
-            border-left: 4px solid #60628f;
-        }
-        footer {
-            margin-top: 50px;
-            font-size: 0.9em;
-            text-align: center;
-        }
-        a {
-            color: #0068b3;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            display: flex;
-            align-items: center;
-        }
-        .icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord AI Bot</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2f3136;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      width: 100%;
+      max-width: 900px; 
+      background-color: #202225;
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+    .banner {
+      width: 100%;
+      height: 200px;
+      background-color: #000;
+      position: relative;
+    }
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 5px solid #2f3136;
+      background-color: #202225;
+      background-image: url('https://cdn.discordapp.com/app-icons/1166326783453429821/f1cb7f2f6a98127354943bb7ceab737e.png?size=256'); 
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 130px;
+      left: 20px;
+    }
+    .message-button {
+      position: absolute;
+      top: 220px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #4f545c;
+      border: none;
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .message-button:hover {
+      background-color: #5865f2;
+    }
+    .content {
+      padding: 60px 20px 20px 20px;
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      margin-left: 130px;
+      margin-top: -30px;
+      flex-wrap: nowrap; 
+    }
+    .username {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ffffff
+    }
+    .app-badge {
+      background-color: #5865f2;
+      color: #ffffff;
+      border-radius: 3px;
+      padding: 2px 8px;
+      font-size: 0.8em;
+      margin-left: 10px;
+    }
+    .about-me {
+      margin-top: 20px;
+      background-color: #36393f;
+      padding: 15px;
+      border-radius: 8px;
+      color: #b9bbbe;
+      width: 100%;
+    }
+    h1, h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .commands {
+      background-color: #1e1f22;
+      padding: 15px;
+      border-left: 4px solid #60628f;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .commands ul {
+      list-style: none;
+      padding: 0;
+    }
+    .commands ul li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .commands ul li::before {
+      jjjjjjjjjjjjjjjjjjj
+      color: #5865f2;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+    a {
+      color: #7289da;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #2f3136;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #8e9297;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to 𝗔𝗶's Info Page</h1>
-    <p>𝗔𝗶 is powered by OpenAI and brings a range of features to help you with everything from trivia to general knowledge!</p>
-
-    <h2>Commands</h2>
-    <div class="commands">
-        <p><strong>/ask [question]:</strong> Get instant AI-powered answers to any question!</p>
-        <p><strong>/trivia:</strong> Receive random trivia facts.</p>
-        <p><strong>/info:</strong> Learn more about the bot and its capabilities.</p>
-        <p><strong>/help:</strong> Get a list of all available commands and how to use them.</p>
+  <div class="container">
+    <div class="banner"></div>
+    <div class="profile-pic"></div>
+    <button class="message-button">Start Chatting</button>
+    <div class="content">
+      <div class="header">
+        <span class="username">𝗔𝗶#2923</span>
+        <span class="app-badge">APP</span>
+      </div>
+      <div class="about-me">
+        <h1>Welcome to 𝗔𝗶's Info Page</h1>
+        <p>𝗔𝗶's Discord Bot is powered by OpenAI and brings a range of features to help you with everything from trivia to general knowledge!</p>
+        <h2>Commands</h2>
+        <div class="commands">
+          <ul>
+            <li><strong>/ask [question]:</strong> Get instant AI-powered answers to any question!</li>
+            <li><strong>/trivia:</strong> Receive random trivia facts.</li>
+            <li><strong>/info:</strong> Learn more about the bot and its capabilities.</li>
+            <li><strong>/help:</strong> Get a list of all available commands and how to use them.</li>
+          </ul>
+        </div>
+        <h2>Bot Capabilities</h2>
+        <p>This bot is designed to enhance your server with AI-driven responses and useful features:</p>
+        <ul>
+          <li>Provides fast, reliable answers to questions using OpenAI’s capabilities.</li>
+          <li>Offers trivia and fun facts to keep conversations engaging.</li>
+          <li>Handles various types of general and specialized queries.</li>
+        </ul>
+        <h2>Socials</h2>
+        <p>Follow us on our social media for updates and more:</p>
+        <ul>
+          <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter Icon"><a href="https://twitter.com/yourbot">Twitter</a></li>
+          <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Icon"><a href="https://github.com/Gillamaru">GitHub</a></li>
+        </ul>
+      </div>
     </div>
-
-    <h2>Bot Capabilities</h2>
-    <p>This bot is designed to enhance your server with AI-driven responses and useful features:</p>
-    <ul>
-        <li>Provides fast, reliable answers to questions using OpenAI’s capabilities.</li>
-        <li>Offers trivia and fun facts to keep conversations engaging.</li>
-        <li>Handles various types of general and specialized queries.</li>
-    </ul>
-
-    <h2>Socials</h2>
-    <p>Follow us on our social media for updates and more:</p>
-    <ul>
-      <ul>
-        <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter Icon"><a href="https://twitter.com/yourbot">Twitter</a></li>
-        <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Icon"><a href="https://github.com/yourbot">GitHub</a></li>
-      </ul>
-    </ul>
-
-    <footer>
-        <p>Created by #𝟩𝟢𝟢𝟦𝟪𝟢𝟨𝟨𝟧. Powered by OpenAI. Hosted on GitHub.</p>
-    </footer>
+  </div>
+  <footer>
+    <p>Created by #700480665. Powered by OpenAI. Hosted on GitHub.</p>
+  </footer>
 </body>
 </html>
-
