@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discord AI Bot</title>
+  <link rel="icon" type="image/png" href="https://static-00.iconduck.com/assets.00/discord-icon-2048x2048-o5mluhz2.png">
+  <title>𝗔𝗶 - Discord AI Bot</title>
   <style>
     * {
       margin: 0;
@@ -17,16 +18,18 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       min-height: 100vh;
       margin: 0;
+      padding: 0 20px;
     }
     .container {
       width: 100%;
       max-width: 900px; 
       background-color: #202225;
-      flex: 1;
       overflow: hidden;
       position: relative;
+      padding-bottom: 20px;
     }
     .banner {
       width: 100%;
@@ -38,8 +41,8 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      border: 5px solid #2f3136;
-      background-color: #202225;
+      border: 6px solid #202225;
+      background-color: #000;
       background-image: url('https://cdn.discordapp.com/app-icons/1166326783453429821/f1cb7f2f6a98127354943bb7ceab737e.png?size=256'); 
       background-size: cover;
       background-position: center;
@@ -73,14 +76,12 @@
     .header {
       display: flex;
       align-items: center;
-      margin-left: 130px;
-      margin-top: -30px;
       flex-wrap: nowrap; 
     }
     .username {
       font-size: 1.5em;
       font-weight: bold;
-      color: #ffffff
+      color: #ffffff;
     }
     .app-badge {
       background-color: #5865f2;
@@ -146,7 +147,7 @@
     a:hover {
       text-decoration: underline;
     }
-    footer {
+    .footer {
       margin-top: 30px;
       padding-top: 20px;
       font-size: 0.9em;
@@ -196,9 +197,10 @@
         </ul>
       </div>
     </div>
-  </div>
-  <div class="footer">
+    <div class="footer">
     <p>Created by #700480665. Powered by OpenAI. Hosted on GitHub.</p>
+  </div>
+
   </div>
 </body>
 </html>
