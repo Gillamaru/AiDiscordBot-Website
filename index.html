@@ -50,22 +50,6 @@
       top: 130px;
       left: 20px;
     }
-    .message-button {
-      position: absolute;
-      top: 220px;
-      right: 20px;
-      padding: 10px 20px;
-      background-color: #4f545c;
-      border: none;
-      border-radius: 4px;
-      color: #ffffff;
-      font-size: 0.9em;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    .message-button:hover {
-      background-color: #5865f2;
-    }
     .content {
       padding: 60px 20px 20px 20px;
       padding-top: 50px;
@@ -76,7 +60,8 @@
     .header {
       display: flex;
       align-items: center;
-      flex-wrap: nowrap; 
+      justify-content: space-between;
+      width: 100%;
     }
     .username {
       font-size: 1.5em;
@@ -90,6 +75,19 @@
       padding: 2px 8px;
       font-size: 0.8em;
       margin-left: 10px;
+    }
+    .message-button {
+      padding: 10px 20px;
+      background-color: #4f545c;
+      border: none;
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .message-button:hover {
+      background-color: #5865f2;
     }
     .about-me {
       margin-top: 20px;
@@ -162,13 +160,15 @@
   <div class="container">
     <div class="banner"></div>
     <div class="profile-pic"></div>
-    <a href="https://discord.com/oauth2/authorize?client_id=1166326783453429821&permissions=2147732480&integration_type=0&scope=bot">
-    <button class="message-button">Start Chatting</button>
-    </a>
     <div class="content">
       <div class="header">
-        <span class="username">𝘼𝗶#2923</span>
-        <span class="app-badge">APP</span>
+        <div>
+          <span class="username">𝘼𝗶#2923</span>
+          <span class="app-badge">APP</span>
+        </div>
+        <a href="https://discord.com/oauth2/authorize?client_id=1166326783453429821&permissions=2147732480&integration_type=0&scope=bot">
+          <button class="message-button">Start Chatting</button>
+        </a>
       </div>
       <div class="about-me">
         <h1>Welcome to 𝘼𝗶's Info Page</h1>
